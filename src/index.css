@@ -9,9 +9,12 @@
 }
 
 body {
-  background: linear-gradient(217deg, #082139CC, #082139FF 70.71%),
+  background: linear-gradient(217deg, #D14F3ECC, #FFD23EFF 70.71%),
+  linear-gradient(127deg, #D1232ACC, #D1232AFF 70.71%),
+  linear-gradient(336deg, #CA762ACC, #CA762AFF 70.71%);
+  /* background: linear-gradient(217deg, #082139CC, #082139FF 70.71%), SPOOKY SZN
               linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-              linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+              linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
 }
 
 #root {
@@ -37,4 +40,5 @@ h1.coming-soon-text {
   @apply text-5xl;
   @apply text-wp-cream-white;
   @apply text-epicursive;
+  text-shadow: 3px 3px #020406;
 }
