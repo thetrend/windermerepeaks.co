@@ -1,6 +1,12 @@
+@import 'https://use.typekit.net/wvn5not.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-epicursive {
+  font-family: epicursive, sans-serif;
+}
 
 body {
   background: linear-gradient(217deg, #082139CC, #082139FF 70.71%),
@@ -14,4 +20,21 @@ body {
   flex-flow: column nowrap;
   justify-content: space-evenly;
   min-height: 100vh;
+}
+
+.coming-soon-svg {
+  max-height: 70vh;
+  width: auto;
+  margin: auto 4vw;
+  @media screen and (orientation: portrait) {
+    height: auto;
+    max-width: 90vw;
+  }
+}
+
+h1.coming-soon-text {
+  @apply mb-20;
+  @apply text-5xl;
+  @apply text-wp-cream-white;
+  @apply text-epicursive;
 }
