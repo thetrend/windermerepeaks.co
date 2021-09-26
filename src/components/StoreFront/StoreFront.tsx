@@ -1,23 +1,21 @@
 import React from 'react';
 
-import Header from './Header';
-import Footer from './Footer';
-
-import Products from '../Products';
-
 import styles from './storefront.module.less';
 
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import Products from '../Products';
+
 const StoreFront: React.FC = () => {
-  const { StoreFrontTheme, BodyWrapper, MainWrapper } = styles;
+  const { StoreFrontTheme, BodyWrapper } = styles;
   return (
     <div className={StoreFrontTheme}>
       <div className={BodyWrapper}>
         <Header />
-        <main className={MainWrapper}>
-          <h1>Windermere Peaks Co.</h1>
-          <p>Welcome to the world of sticker and cup sales!</p>
+        <Main>
           <Products />
-        </main>
+        </Main>
         <Footer />
       </div>
     </div>

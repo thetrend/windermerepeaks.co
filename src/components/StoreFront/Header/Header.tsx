@@ -2,32 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './header.module.less';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
+import Menu from '../Menu';
 
 const Header: React.FC = () => {
-  const {
-    HeaderWrapper,
-    LogoWrapper,
-    SiteMenu,
-    ShoppingMenu,
-    MobileMenu,
-  } = styles;
+  const { HeaderWrapper, LogoWrapper, ShoppingMenu, MobileMenu } = styles;
   return (
     <header className={HeaderWrapper}>
       <div className={LogoWrapper}>
         <Logo />
       </div>
       {/* TODO: Space for sale/promotion banner */}
-      <ul className={SiteMenu}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+      <Menu />
       <ul className={ShoppingMenu}>
         <li>
           <i>
