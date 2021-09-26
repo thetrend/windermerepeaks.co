@@ -1,6 +1,7 @@
 @import './reset.less';
 
 :root {
+  --theme-links: var(--wp-sage-green-primary);
   --wp-brown-primary: #231f20;
   --wp-brown-secondary: #3c180a;
   --wp-brown-tertiary: #61230a;
@@ -47,10 +48,10 @@ a {
   text-decoration: none;
 
   &::after {
-    background-color: var(--wp-sage-green-primary);
-    bottom: 0;
+    background-color: var(--theme-links);
+    bottom: -4px;
     content: '';
-    height: 0.25rem;
+    height: 0.3rem;
     left: 0;
     opacity: 1;
     position: absolute;
@@ -64,6 +65,13 @@ a {
   &:focus::after {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+i {
+  svg:hover,
+  svg:active {
+    stroke-width: 2;
   }
 }
 

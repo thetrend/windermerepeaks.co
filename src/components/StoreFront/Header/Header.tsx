@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './header.module.less';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
 import Menu from '../Menu';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 const Header: React.FC = () => {
   const { HeaderWrapper, LogoWrapper, ShoppingMenu, MobileMenu } = styles;
+
   return (
     <header className={HeaderWrapper}>
       <div className={LogoWrapper}>
@@ -53,7 +54,7 @@ const Header: React.FC = () => {
                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
-          </i>{' '}
+          </i>
           <Link to="/cart">Shopping Bag</Link>
         </li>
         <li>
@@ -62,34 +63,38 @@ const Header: React.FC = () => {
       </ul>
       <ul className={MobileMenu}>
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </i>
         </li>
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1}
-              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-            />
-          </svg>
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1}
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+          </i>
         </li>
       </ul>
     </header>
