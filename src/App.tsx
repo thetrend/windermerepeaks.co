@@ -1,13 +1,16 @@
 import React from 'react';
-import { ReactComponent as Logo } from './img/logo.svg';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-class App extends React.Component {
-  render() {
-    return <>
-      <Logo className="coming-soon-svg" />
-      <h1 className="coming-soon-text text-center">Opening<br />September 27</h1>
-    </>;
-  }
-}
+import StoreFront from './components/StoreFront';
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={StoreFront} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
 export default App;

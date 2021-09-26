@@ -1,0 +1,48 @@
+.FooterWrapper {
+  align-items: center;
+  background: #fff4;
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: lighter;
+  justify-content: space-between;
+
+  @media screen and (orientation: portrait) {
+    flex-flow: column wrap;
+  }
+
+  p {
+    align-items: center;
+    display: flex;
+
+    @media screen and (orientation: landscape) {
+      margin-left: 2vw;
+    }
+
+    @media screen and (orientation: portrait) {
+      margin-top: 5px;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: 0.75rem;
+  }
+}
+
+.FooterMenu {
+  display: flex;
+  list-style-type: none;
+
+  @media screen and (orientation: portrait) {
+    align-self: center;
+    justify-content: space-evenly;
+  }
+
+  li {
+    margin-right: 2vw;
+
+    &:not(:first-of-type)::before {
+      content: '\00b7';
+      margin-right: 2vw;
+    }
+  }
+}
