@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './header.module.less';
 import Menu from '../Menu';
@@ -7,13 +7,19 @@ import { ReactComponent as Logo } from '../../assets/logo.svg';
 const Header: React.FC = () => {
   const { HeaderWrapper, LogoWrapper, ShoppingMenu, MobileMenu } = styles;
 
+  const [navToggle, setNavToggle] = useState(false);
+  const [bagToggle, setBagToggle] = useState(false);
+
+  const toggleMenu = () => setNavToggle(!navToggle);
+  const toggleBag = () => setBagToggle(!bagToggle);
+
   return (
     <header className={HeaderWrapper}>
       <div className={LogoWrapper}>
         <Logo />
       </div>
       {/* TODO: Space for sale/promotion banner */}
-      <Menu />
+      <Menu isToggled={navToggle} />
       <ul className={ShoppingMenu}>
         <li>
           <i>
@@ -63,7 +69,11 @@ const Header: React.FC = () => {
       </ul>
       <ul className={MobileMenu}>
         <li>
-          <i>
+          <button
+            style={{ background: 'transparent', border: 0 }}
+            type="button"
+            onClick={toggleMenu}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -77,10 +87,14 @@ const Header: React.FC = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </i>
+          </button>
         </li>
         <li>
-          <i>
+          <button
+            type="button"
+            style={{ background: 'transparent', border: 0 }}
+            onClick={toggleBag}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -94,7 +108,7 @@ const Header: React.FC = () => {
                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
-          </i>
+          </button>
         </li>
       </ul>
     </header>

@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import cn from 'classnames';
 import styles from '../Header/header.module.less';
 
-const Menu: React.FC = () => {
-  const { SiteMenu } = styles;
+interface MenuProps {
+  isToggled: boolean;
+}
+
+const Menu: React.FC<MenuProps> = ({ isToggled }: MenuProps) => {
+  const { SiteMenu, ShowSiteMenu } = styles;
   return (
-    <ul className={SiteMenu}>
+    <ul className={isToggled ? cn(SiteMenu, ShowSiteMenu) : SiteMenu}>
       <li>
         <Link to="/">Home</Link>
       </li>

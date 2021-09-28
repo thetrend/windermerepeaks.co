@@ -1,6 +1,13 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-order"],
   "rules": {
-    "color-hex-case": "upper"
+    "color-hex-length": "long",
+    "color-hex-case": "upper",
+    "order/properties-order": [["composes"], { "unspecified": "bottomAlphabetical"}]
   }
 }
