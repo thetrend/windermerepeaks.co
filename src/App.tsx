@@ -1,13 +1,16 @@
 import React from 'react';
 import { ReactComponent as Logo } from './img/logo.svg';
 
-class App extends React.Component {
-  render() {
-    return <>
+const App: React.FC = () => {
+  return (
+    <>
       <Logo className="coming-soon-svg" />
-      <h1 className="coming-soon-text text-center">Opening<br />September 27</h1>
-    </>;
-  }
-}
-
+      <h1 className="coming-soon-text text-center">
+        Opening
+        <br />
+        October 4
+      </h1>
+    </>
+  );
+};
 export default App;
