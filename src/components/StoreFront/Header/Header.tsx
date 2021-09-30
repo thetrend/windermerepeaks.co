@@ -61,7 +61,7 @@ const Header: React.FC = () => {
               />
             </svg>
           </i>
-          <Link to="/cart">Shopping Bag</Link>
+          <Link to="/cart">Bag</Link>
         </li>
         <li>
           <Link to="/logout">Logout</Link>

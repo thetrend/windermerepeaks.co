@@ -8,7 +8,7 @@
     align-self: center;
     width: clamp(10vw, 20vw, 100px);
 
-    @media screen and (orientation: portrait) {
+    @media screen and (max-width: 800px) {
       width: clamp(10vw, 20vw, 80px);
     }
 
@@ -19,6 +19,28 @@
 
   .SiteMenu {
     flex-grow: 1;
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-flow: column wrap;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #edededed;
+      height: 100%;
+      width: 75vw;
+      z-index: 2;
+      transform: translateX(-75vw);
+      transition: 0.3s ease transform;
+      padding: 4vh 10vw;
+    }
+  }
+
+  .ShowSiteMenu {
+    transform: translateX(0);
+  }
+
+  .ShowShoppingMenu {
+    transform: translateY(0);
   }
 
   .SiteMenu,
@@ -42,9 +64,8 @@
     }
   }
 
-  .SiteMenu,
   .ShoppingMenu {
-    @media screen and (orientation: portrait) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   }
@@ -61,7 +82,7 @@
     flex-grow: 1;
     justify-content: flex-end;
 
-    @media screen and (orientation: landscape) {
+    @media screen and (min-width: 801px) {
       display: none;
     }
 
