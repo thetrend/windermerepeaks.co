@@ -1,15 +1,20 @@
-import React from 'react';
+import { FC } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import StoreFront from './components/StoreFront';
+import StoreHome from 'features/Store/StoreHome';
 
-const App: React.FC = () => {
+import AdminHome from 'features/Admin/AdminHome';
+
+const App: FC = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={StoreFront} />
-      </Switch>
-    </BrowserRouter>
+  <BrowserRouter>
+    <Switch>
+      {/* STORE ROUTES */}
+      <Route exact path='/' component={StoreHome} />
+      {/* ADMIN ROUTES */}
+      <Route exact path='/admin' component={AdminHome} />
+    </Switch>
+  </BrowserRouter>
   );
 };
 

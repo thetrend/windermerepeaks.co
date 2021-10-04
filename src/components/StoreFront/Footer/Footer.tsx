@@ -1,10 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './footer.module.less';
 
-const Footer: React.FC = () => {
+import styles from './Footer.module.less';
+
+const Footer: FC = () => {
   const { FooterWrapper, FooterMenu } = styles;
-
   interface FooterLinks {
     title: string;
     url: string;
@@ -32,8 +32,7 @@ const Footer: React.FC = () => {
   return (
     <footer className={FooterWrapper}>
       <p>
-        &copy; {new Date().getFullYear()}, Windermere Peaks Co. Some rights
-        reserved.
+        &copy; {new Date().getFullYear()}, Windermere Peaks Co. Some rights reserved.
       </p>
       <ul className={FooterMenu}>
         {footerLinks.map((link: FooterLinks, index: number) => {

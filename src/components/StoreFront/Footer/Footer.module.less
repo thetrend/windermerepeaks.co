@@ -1,0 +1,40 @@
+.FooterWrapper {
+  @apply flex items-center justify-between;
+  background: #fff6;
+  font-size: 0.85rem;
+  font-weight: lighter;
+  padding: 2vh 3vw;
+
+  @media screen and (max-width: 800px) {
+    @apply flex-col flex-nowrap;
+  }
+
+  p {
+    @apply flex items-center;
+    @media screen and (max-width: 800px) {
+      margin-top: 5px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 0.75rem;
+  }
+}
+
+.FooterMenu {
+  @apply flex list-none;
+  padding-inline-start: 0;
+
+  @media screen and (max-width: 800px) {
+    @apply self-center justify-evenly;
+  }
+
+  li {
+    margin-right: 2vw;
+
+    &:not(:first-of-type)::before {
+      content: '\00b7';
+      margin-right: 2vw;
+    }
+  }
+}

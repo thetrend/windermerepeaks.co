@@ -3,8 +3,20 @@ module.exports = {
     {
       plugin: require('craco-less'),
       options: {
-        noIeCompat: true,
+        lessLoaderOptions: {
+          lessOptions: {
+            javascriptEnabled: true,
+          },
+        },
       },
     },
   ],
-};
+  style: {
+    postcss: {
+      plugins: [
+        require('tailwindcss')(require('./tailwind.config')),
+        require('autoprefixer'),
+      ],
+    },
+  },
+}

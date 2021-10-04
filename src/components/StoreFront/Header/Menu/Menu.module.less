@@ -1,0 +1,16 @@
+.SiteMenu {
+  @apply flex-grow;
+
+  @media screen and (max-width: 800px) {
+    @apply flex flex-col flex-wrap absolute top-0 left-0 h-screen;
+    background: #edededed;
+    width: 75vw;
+    transform: translateX(-75vw);
+    transition: 0.5 ease transform;
+    padding: 4vh 10vw;
+  }
+}
+
+.ShowSiteMenu {
+  transform: translateX(0);
+}

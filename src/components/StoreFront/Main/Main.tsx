@@ -1,9 +1,18 @@
-import React from 'react';
-import styles from './main.module.less';
+import { FC } from 'react';
 
-const Main: React.FC = ({ children }) => {
+import styles from './Main.module.less';
+
+type Props = {
+  children: React.ReactNode;
+};
+
+const Main: FC<Props> = ({ children }: Props) => {
   const { MainWrapper } = styles;
-  return <div className={MainWrapper}>{children}</div>;
+  return (
+    <div className={MainWrapper}>
+      {children}
+    </div>
+  );
 };
 
 export default Main;
