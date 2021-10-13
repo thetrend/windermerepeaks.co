@@ -5,7 +5,7 @@ import { signup } from './signup';
 
 const handler = async (event: HandlerEvent) => {
   try {
-    const path: string = event.path.replace(/\.netlify\/functions\/[^/]+/, '');
+    const path: string = event.path.replace(/\/functions\/[^/]+/, '');
     const segments: string[] = path.split('/').filter(Boolean);
     const endpoint: string = segments[segments.length - 1];
 
